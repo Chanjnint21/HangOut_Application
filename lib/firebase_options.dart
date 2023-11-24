@@ -65,7 +65,8 @@ class DefaultFirebaseOptions {
     projectId: 'outdoor-traveler',
     databaseURL: 'https://outdoor-traveler-default-rtdb.firebaseio.com',
     storageBucket: 'outdoor-traveler.appspot.com',
-    iosClientId: '149253441126-89c2i9kv2pofj2pn7ovct8aajl6tn3h7.apps.googleusercontent.com',
+    iosClientId:
+        '149253441126-89c2i9kv2pofj2pn7ovct8aajl6tn3h7.apps.googleusercontent.com',
     iosBundleId: 'com.example.hangoutApp',
   );
 }
