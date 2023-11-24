@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hangout_app/screens/auth.dart';
-import 'package:hangout_app/screens/home.dart';
+import 'package:hangout_app/screens/app.dart';
 
 import 'firebase_options.dart';
 
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FlutterChat',
+      title: 'HangOut',
       theme: ThemeData().copyWith(
         useMaterial3: true,
         colorScheme:
@@ -30,7 +30,7 @@ class App extends StatelessWidget {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (ctx, snapshot) {
             if (snapshot.hasData) {
-              return const HomeScreen();
+              return const AppScreen();
             }
 
             return const AuthScreen();
