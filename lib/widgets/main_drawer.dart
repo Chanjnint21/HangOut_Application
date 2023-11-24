@@ -2,11 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
-  const MainDrawer({super.key});
+  const MainDrawer({super.key, required this.onSelectScreen});
+
+  final void Function(String identifier) onSelectScreen;
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      width: MediaQuery.of(context).size.width * 0.70,
       backgroundColor: const Color(0xFF3b3b3b),
       child: Column(
         children: [
@@ -47,7 +50,7 @@ class MainDrawer extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Handle onTap
+                onSelectScreen('home');
               },
             ),
           ),
@@ -80,7 +83,7 @@ class MainDrawer extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Handle onTap
+                onSelectScreen('draft');
               },
             ),
           ),
@@ -113,7 +116,7 @@ class MainDrawer extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Handle onTap
+                onSelectScreen('profile');
               },
             ),
           ),
